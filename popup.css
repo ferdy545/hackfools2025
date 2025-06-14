@@ -1,0 +1,27 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    box-shadow: invert  0 0 20px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+#popup-ok {
+    margin-top: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- informações do site -->   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKFOOLS</title>
+    
+    <!-- Fontes
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Libre+Baskerville&family=Red+Hat+Mono:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    -->
+
+    <!-- Style -->
+    <link href="./popup.css" rel="stylesheet" type="text/css"/>
+    <link href="./topbar.css" rel="stylesheet" type="text/css"/>
+    <link href="./sidebar.css" rel="stylesheet" type="text/css"/>
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
+    <link href="./time_box.css" rel="stylesheet" type="text/css"/>
+  </head>
+  
+  <body>
+    <input type="radio" name="config" id="bkpreto" style="display:none;">
+    <input type="radio" name="config" id="txtbranco" style="display:none;">
+
+    <header class="topbar">
+      <button class="menu-button">☰</button>
+      <h1 class="site-title">© F.O.O.L.S. ™ ®</h1>
+      <!-- You can add more items to the right later -->
+    </header>
+
+    <div id="caixa-movel" class="caixa-movel">
+      <div class="cabecalho-movel" id="cabecalho-movel">
+          ⏰ Hora atual:
+      </div>
+      <div class="conteudo-movel">
+          <p> <span id="conteudo-movel"></span></p>
+      </div>
+    </div>
+
+
+    <div id="pagina-inicial" class="pagina"> 
+      <h2><pre> Página Inicial</h2></pre>
+      <p><pre>    Bem-vindo ao Organizador de Tarefas Inúteis!</pre></p>
+    </div>
+
+    <div id="tarefas" class="pagina" style="display:none;">
+        <h2><pre> Tarefas</pre></h2>
+        <p><pre>    Suas tarefas estarão esperando por você aqui!</pre></p>
+        <p><pre>    Pontuação: <span id="score">0</span></pre></p>
+
+        <!-- Botão e caixa de texto para adicionar tarefa -->
+        <div id="form">
+          <input type="text" id="novaTarefa" placeholder="Nova tarefa">
+          <button onclick="adicionarTarefa()">Adicionar</button>
+        </div>
+        
+        <ul id="ultarefas">
+        </ul>
+
+          
+          <!-- Pop-up caso o usuário não digite uma tarefa ao pressionar "adicionar "-->
+          <div id="popup" class="popup">
+            <div class="popup-content">
+              <p id="popup-message"></p>
+              <button id="popup-ok">OK</button>
+            </div>
+          </div>
+          
+    </div>
+
+    <div id="configuracoes" class="pagina" style="display:none;">
+        <h2><pre> Configurações</pre></h2>
+        <p><pre>    Configurações do site.</pre></p>
+        <div class="config">
+        <label for="bkpreto" id="lbkpreto"><div class="pareceUmBotao">Fundo Preto</div></label>
+        <label for="txtbranco" id="ltxtbranco"><div class="pareceUmBotao">Texto Branco</div></label>
+        </div>
+    </div>
+
+    <div id="sobre" class="pagina" style="display:none;">
+        <h2><pre> Sobre</pre></h2>
+        <p>
+          <pre>
+    Desenvolvido por: F.O.O.L.S. <br>
+      F útil <br>
+      O missa <br>
+      O bsoleta <br>
+      L imitada <br>
+      S oluções <br>
+          </pre>
+        </p>
+    </div>
+    
+    <!-- Menu da topbar --->
+    <div id="sidebar" class="sidebar">
+      <a href="#" onclick="mostrarPagina('pagina-inicial')">Página Inicial</a>
+      <a href="#" onclick="mostrarPagina('tarefas')">Tarefas</a>
+      <a href="#" onclick="mostrarPagina('configuracoes')">Configurações</a>
+      <a href="#" onclick="mostrarPagina('sobre')">Sobre</a>
+    </div>
+
+    <div id="popup-parabens" 
+    style="display: none;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #4CAF50;
+    color: white; 
+    padding: 20px 30px; 
+    border-radius: 10px; 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    text-align: center; 
+    z-index: 1001; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;">
+    <p id="mensagem-parabens-aqui"></p> </div>
+    
+    <!-- Scripts Javascript -->
+    <script src="./popup.js"></script>
+    <script src="./popup-parabens.js"></script>
+    <script src="./sidebar.js"></script>
+    <script src="./pages.js"></script>
+    <script src="./script.js"></script>
+    <script src="./time_box.js"></script>
+
+    </body>
+    
+
+    
+    <audio id="somPato" src="./duck-quack.mp3">
+
+  </html>

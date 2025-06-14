@@ -1,0 +1,81 @@
+body{
+    margin: 0px;
+    padding-top:4em;
+    color: black;
+    background: hsl(0, 0%, 100%);   
+    overflow:hidden;    
+}
+
+h1{
+    text-align: center;
+}
+
+#form{
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li {
+    margin-inline:auto;
+    width: 60vw;
+    border: 1px green solid;
+    margin-block: 5px;
+}
+
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #888;
+    font-style: italic;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.config{
+    width:100vw;
+}
+
+.pareceUmBotao{
+    width: 10em;
+    padding: 1em;
+    margin: auto;
+    margin-block: 5px;
+    background: rgb(251, 139, 255);
+    border: 2px rgb(121, 0, 177) solid;
+    color: black;
+    text-align: center;
+}
+
+
+
+.pareceUmBotao:hover{
+    background: rgb(208, 37, 214);
+    cursor: pointer;
+}
+
+#bkpreto:checked ~ .pagina>.config>#lbkpreto>div{
+    background:rgb(208, 37, 214);
+}
+
+#txtbranco:checked ~ .pagina>.config>#ltxtbranco>div{
+    background:rgb(208, 37, 214);
+}
+
+#bkpreto:checked ~ .pagina>.config{
+    margin-top: 5em;
+}
+
+#bkpreto:checked ~ .pagina{
+    position: relative;
+    height:100vh;
+    top: -4em;
+    background: black;
+}
+#txtbranco:checked ~ .pagina{
+    color:white;
+}
